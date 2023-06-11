@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <title>Inspector Scan Results</title>
+  </head>
+  <body>
+    <p> 
+    An AWS Inspector scan is completed.
+    </p>
+    <h1>Details</h1>
+      <table>
+        <tbody>
+        <tr><td><b>Account ID</b>:</td><td>{{ account }}</td></tr>
+        <tr><td><b>Repository</b>:</td><td>{{ repository_name }}</td></tr>
+        <tr><td><b>Image Tags</b>:</td><td>{{ image_tags }}</td></tr> 
+        <tr><td><b>Scanned at</b>:</td><td>{{ scanned_at }}</td></tr>
+        <tr><td><b>Scan Status</b>:</td><td>{{ scan_status }}</td></tr>
+      </tbody>
+      </table>
+    
+    <h1>Findings</h1>
+    <table>
+      <thead>
+        <tr>
+          <th style="font-weight:bold ;">Level</th>
+          <th style="font-weight:bold ;">Count</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr style="color: orangered;">
+          <td>Critical</td>
+          <td>{{ findings_critical }}</td>
+        </tr>
+        <tr style="color:red;">
+          <td>High</td>
+          <td>{{ findings_high }}</td>
+        </tr>
+        <tr style="color: orange;">
+          <td>Medium</td>
+          <td>{{ findings_medium }}</td>
+        </tr>
+        <tr style="color: green;">
+          <td>Low</td>
+          <td>{{ findings_low }}</td>
+        </tr>
+        <tr style="color: gray;">
+          <td>Undefined</td>
+          <td>{{ findings_undefined }}</td>
+        </tr>
+        <tr style="color: black;">
+          <td>Total</td>
+          <td>{{ findings_total }}</td>
+        </tr>
+      </tbody>
+      
+    </table>
+  </body>
+
+</html>
