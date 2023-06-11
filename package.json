@@ -71,7 +71,8 @@
   "keywords": [
     "aws",
     "cdk",
-    "ecr"
+    "ecr",
+    "sns"
   ],
   "main": "lib/index.js",
   "license": "Apache-2.0",
