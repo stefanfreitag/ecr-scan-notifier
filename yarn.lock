@@ -4151,7 +4151,7 @@ jsesc@^2.5.1:
   resolved "https://registry.yarnpkg.com/jsesc/-/jsesc-2.5.2.tgz#80564d2e483dacf6e8ef209650a67df3f0c283a4"
   integrity sha512-OYu7XEzjkCQ3C5Ps3QIZsQfNpqoJyZZA99wd9aWd05NCtC5pWOkShK2mkL6HXQR6/Cy2lbNdPlZBpuQHXE63gA==
 
-jsii-diff@^1.82.0:
+jsii-diff@^1.83.0:
   version "1.83.0"
   resolved "https://registry.yarnpkg.com/jsii-diff/-/jsii-diff-1.83.0.tgz#1f8e9dc5df845114d3a2a5c233f408b4703d2348"
   integrity sha512-IY3OBIBFNjrsE/4wO9eyt+emmz15LL1dYJaNUk1IfM3ROzodpbuNV/nwQ76THpGfaN+E436NWyM56JU5oP3pBA==
@@ -4178,7 +4178,7 @@ jsii-docgen@^7.2.9:
     semver "^7.5.0"
     yargs "^16.2.0"
 
-jsii-pacmak@^1.82.0:
+jsii-pacmak@^1.83.0:
   version "1.83.0"
   resolved "https://registry.yarnpkg.com/jsii-pacmak/-/jsii-pacmak-1.83.0.tgz#f6ef168ea34251697083b53d1663154a96ea1b3a"
   integrity sha512-eVSX86tUx6/55O73Bc/NrcOkIWNH3YdyS+WdQdIPKgoOVfTWqbnUOY5rYoyUUcCOrO2wLtgVeP8u1bJkoD3U5w==
@@ -5350,7 +5350,7 @@ progress@^2.0.3:
   resolved "https://registry.yarnpkg.com/progress/-/progress-2.0.3.tgz#7e8cf8d8f5b8f239c1bc68beb4eb78567d572ef8"
   integrity sha512-7PiHtLll5LdnKIMw100I+8xJXR5gW2QwWYkT6iJva0bXitZKa/XMrSbdmg3r2Xnaidz9Qumd0VPaMrZlF9V9sA==
 
-projen@^0.71.82:
+projen@^0.71.90:
   version "0.71.90"
   resolved "https://registry.yarnpkg.com/projen/-/projen-0.71.90.tgz#49bce6c6c26994bc8c76c7fe6278e848e495bc3f"
   integrity sha512-+7/eYcvPnFrhfXMO97QUIvcop5C+rYJKDnhhIyVl7wrV9GMnmNR4VqNbq1dMjfbFXfmVCab9YgQm9EVSseecww==
