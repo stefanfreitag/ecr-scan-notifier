@@ -27,3 +27,4 @@ tsconfig.tsbuildinfo
 .idea
 __pycache__
 .coverage
+/.gitattributes
