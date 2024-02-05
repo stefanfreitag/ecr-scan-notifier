@@ -6,7 +6,7 @@ const project = new awscdk.AwsCdkConstructLibrary({
   authorName: 'Stefan Freitag',
   authorEmail: 'stefan.freitag@rwe.com',
   authorOrganization: false,
-  cdkVersion: '2.83.0',
+  cdkVersion: '2.126.0',
   //majorVersion: 1,
   defaultReleaseBranch: 'main',
   description: 'Notifies on new AWS ECR scan results',
@@ -33,7 +33,11 @@ const project = new awscdk.AwsCdkConstructLibrary({
     dotNetNamespace: 'Io.Github.StefanFreitag',
     packageId: 'Io.Github.StefanFreitag.ecrscannotifier',
   },
-
+  jsiiVersion: '5.x',
+  jest: {
+    jestVersion: '^29',
+  },
+  typescriptVersion: '5.3.3',
 });
 
 const common_exclude = ['.history/', '.venv', '.idea', '__pycache__', '.coverage'];
