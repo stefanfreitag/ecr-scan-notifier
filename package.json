@@ -3,7 +3,7 @@
   "description": "Notifies on new AWS ECR scan results",
   "repository": {
     "type": "git",
-    "url": "https://github.com/stefanfreitag/cdk-ecr-scan-notifier.git"
+    "url": "https://github.com/stefanfreitag/ecr-scan-notifier.git"
   },
   "scripts": {
     "build": "npx projen build",
