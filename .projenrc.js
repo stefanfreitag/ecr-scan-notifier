@@ -15,7 +15,7 @@ const project = new awscdk.AwsCdkConstructLibrary({
       schedule: UpgradeDependenciesSchedule.MONTHLY,
     },
   },
-  repository: 'https://github.com/stefanfreitag/cdk-ecr-scan-notifier.git',
+  repository: 'https://github.com/stefanfreitag/ecr-scan-notifier.git',
   stability: Stability.STABLE,
   keywords: ['aws', 'cdk', 'ecr', 'sns'],
   name: 'ecr-scan-notifier',
