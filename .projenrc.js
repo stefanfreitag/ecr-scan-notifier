@@ -6,7 +6,7 @@ const project = new awscdk.AwsCdkConstructLibrary({
   authorName: 'Stefan Freitag',
   authorEmail: 'stefan.freitag@rwe.com',
   authorOrganization: false,
-  cdkVersion: '2.126.0',
+  cdkVersion: '2.130.0',
   //majorVersion: 1,
   defaultReleaseBranch: 'main',
   description: 'Notifies on new AWS ECR scan results',
