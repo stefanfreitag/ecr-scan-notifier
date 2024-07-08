@@ -4,9 +4,9 @@ const { UpgradeDependenciesSchedule } = require('projen/lib/javascript');
 
 const project = new awscdk.AwsCdkConstructLibrary({
   authorName: 'Stefan Freitag',
-  authorEmail: 'stefan.freitag@rwe.com',
+  authorEmail: 'stefan.freitag@udo.edu',
   authorOrganization: false,
-  cdkVersion: '2.130.0',
+  cdkVersion: '2.148.0',
   //majorVersion: 1,
   defaultReleaseBranch: 'main',
   description: 'Notifies on new AWS ECR scan results',
