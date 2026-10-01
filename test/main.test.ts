@@ -7,7 +7,7 @@ test('Default values for Lambda function', () => {
   const app = new App();
   const stack = new Stack(app, 'test');
   new EcrScanNotifier(stack, 'test', {
-    topicArn: 'arn_of_topic',
+    topicArn: 'arn:aws:sns:eu-central-1:123456789012:ecr-scan-findings',
     logRetentionDays: RetentionDays.ONE_WEEK,
   });
 
@@ -16,11 +16,11 @@ test('Default values for Lambda function', () => {
     Description: 'Send ECR Image Scan findings to Microsoft Teams channel',
     Handler: 'index.handler',
     MemorySize: 128,
-    Runtime: 'python3.13',
+    Runtime: 'python3.14',
     Timeout: 60,
     Environment: {
       Variables: {
-        TOPIC_ARN: 'arn_of_topic',
+        TOPIC_ARN: 'arn:aws:sns:eu-central-1:123456789012:ecr-scan-findings',
       },
     },
   });
@@ -30,7 +30,7 @@ test('Default values for Eventbus Rule', () => {
   const app = new App();
   const stack = new Stack(app, 'test');
   new EcrScanNotifier(stack, 'test', {
-    topicArn: 'arn_of_topic',
+    topicArn: 'arn:aws:sns:eu-central-1:123456789012:ecr-scan-findings',
   });
 
   const template = Template.fromStack(stack);

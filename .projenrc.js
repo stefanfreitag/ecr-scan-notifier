@@ -6,7 +6,7 @@ const project = new awscdk.AwsCdkConstructLibrary({
   authorName: 'Stefan Freitag',
   authorEmail: 'stefan.freitag@udo.edu',
   authorOrganization: false,
-  cdkVersion: '2.159.1',
+  cdkVersion: '2.272.0',
   //majorVersion: 1,
   defaultReleaseBranch: 'main',
   packageManager: NodePackageManager.YARN_CLASSIC,
