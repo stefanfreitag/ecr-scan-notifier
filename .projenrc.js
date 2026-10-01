@@ -1,6 +1,6 @@
 const { awscdk } = require('projen');
 const { Stability } = require('projen/lib/cdk');
-const { UpgradeDependenciesSchedule } = require('projen/lib/javascript');
+const { NodePackageManager, UpgradeDependenciesSchedule } = require('projen/lib/javascript');
 
 const project = new awscdk.AwsCdkConstructLibrary({
   authorName: 'Stefan Freitag',
@@ -9,6 +9,7 @@ const project = new awscdk.AwsCdkConstructLibrary({
   cdkVersion: '2.159.1',
   //majorVersion: 1,
   defaultReleaseBranch: 'main',
+  packageManager: NodePackageManager.YARN_CLASSIC,
   description: 'Notifies on new AWS ECR scan results',
   depsUpgradeOptions: {
     workflowOptions: {
@@ -34,7 +35,7 @@ const project = new awscdk.AwsCdkConstructLibrary({
     packageId: 'Io.Github.StefanFreitag.ecrscannotifier',
   },
   jsiiVersion: '5.x',
-  jest: {
+  jestOptions: {
     jestVersion: '^29',
   },
   typescriptVersion: '5.3.3',

@@ -16,7 +16,7 @@ test('Default values for Lambda function', () => {
     Description: 'Send ECR Image Scan findings to Microsoft Teams channel',
     Handler: 'index.handler',
     MemorySize: 128,
-    Runtime: 'python3.9',
+    Runtime: 'python3.13',
     Timeout: 60,
     Environment: {
       Variables: {

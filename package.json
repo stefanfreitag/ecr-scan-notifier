@@ -40,7 +40,7 @@
   },
   "devDependencies": {
     "@stylistic/eslint-plugin": "^2",
-    "@types/jest": "^27",
+    "@types/jest": "^29",
     "@types/node": "ts5.3",
     "@typescript-eslint/eslint-plugin": "^8",
     "@typescript-eslint/parser": "^8",
@@ -50,15 +50,15 @@
     "eslint": "^9",
     "eslint-import-resolver-typescript": "^3.10.1",
     "eslint-plugin-import": "^2.32.0",
-    "jest": "^27",
+    "jest": "^29",
     "jest-junit": "^17",
     "jsii": "5.x",
-    "jsii-diff": "^1.140.0",
+    "jsii-diff": "^1.141.0",
     "jsii-docgen": "^10.5.0",
-    "jsii-pacmak": "^1.140.0",
+    "jsii-pacmak": "^1.141.0",
     "jsii-rosetta": "5.x",
     "projen": "^0.103.27",
-    "ts-jest": "^27",
+    "ts-jest": "^29",
     "typescript": "5.3.3"
   },
   "peerDependencies": {
@@ -71,6 +71,13 @@
     "ecr",
     "sns"
   ],
+  "devEngines": {
+    "packageManager": {
+      "name": "yarn",
+      "version": "1.22.22",
+      "onFail": "ignore"
+    }
+  },
   "main": "lib/index.js",
   "license": "Apache-2.0",
   "stability": "stable",
@@ -112,11 +119,13 @@
         }
       ]
     ],
-    "preset": "ts-jest",
-    "globals": {
-      "ts-jest": {
-        "tsconfig": "test/tsconfig.json"
-      }
+    "transform": {
+      "^.+\\.[t]sx?$": [
+        "ts-jest",
+        {
+          "tsconfig": "test/tsconfig.json"
+        }
+      ]
     }
   },
   "types": "lib/index.d.ts",
