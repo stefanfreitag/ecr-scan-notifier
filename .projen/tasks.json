@@ -412,7 +412,7 @@
             "--peer",
             "--no-deprecated",
             "--dep=dev,prod,peer,optional",
-            "--filter=@types/jest,eslint-import-resolver-typescript,eslint-plugin-import,jest,jsii-diff,jsii-pacmak,projen,ts-jest"
+            "--filter=eslint-import-resolver-typescript,eslint-plugin-import,jsii-diff,jsii-pacmak,projen"
           ]
         },
         {
@@ -431,8 +431,8 @@
             "eslint-import-resolver-typescript",
             "eslint-plugin-import",
             "eslint",
-            "jest",
             "jest-junit",
+            "jest",
             "jsii-diff",
             "jsii-docgen",
             "jsii-pacmak",

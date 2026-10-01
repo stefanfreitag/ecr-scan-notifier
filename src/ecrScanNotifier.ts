@@ -5,10 +5,13 @@ import { Duration } from 'aws-cdk-lib';
 import { Rule } from 'aws-cdk-lib/aws-events';
 import { LambdaFunction } from 'aws-cdk-lib/aws-events-targets';
 import { Effect, Policy, PolicyStatement } from 'aws-cdk-lib/aws-iam';
-import { Code, Function, Runtime } from 'aws-cdk-lib/aws-lambda';
+import { Code, Function, Runtime, RuntimeFamily } from 'aws-cdk-lib/aws-lambda';
 import { RetentionDays } from 'aws-cdk-lib/aws-logs';
 import { Construct } from 'constructs';
 import { EcrScanNotifierProperties } from './ecrScanNotifierProperties';
+
+// Runtime.PYTHON_3_13 is not available in the minimum supported aws-cdk-lib version
+const PYTHON_3_13 = new Runtime('python3.13', RuntimeFamily.PYTHON);
 
 export class EcrScanNotifier extends Construct {
   props: EcrScanNotifierProperties;
@@ -34,11 +37,11 @@ export class EcrScanNotifier extends Construct {
     const function_dir = path.join(__dirname, '../lambda/');
 
     const fn = new Function(this, 'ecr-scan-notifier', {
-      runtime: Runtime.PYTHON_3_9,
+      runtime: PYTHON_3_13,
       handler: 'index.handler',
       code: Code.fromAsset(function_dir, {
         bundling: {
-          image: Runtime.PYTHON_3_9.bundlingImage,
+          image: PYTHON_3_13.bundlingImage,
           local: {
             tryBundle(outputDir: string) {
               try {
